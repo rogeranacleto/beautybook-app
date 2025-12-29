@@ -1,6 +1,7 @@
 import { Hero } from "../../components/Hero"
 import { MdCheckCircleOutline } from "react-icons/md";
 import bgBeautyBook from "../../assets/bg-beautybook.png";
+import { Footer } from "../../components/Footer";
 export function Home(){
     return (
       <div className="max-w-350">
@@ -53,6 +54,9 @@ export function Home(){
         <div className="min-h-screen bg-black flex items-center justify-center p-5">
           <div className="flex gap-5 items-center flex-wrap">
             <div>
+              <h1 className="text-white mb-10 text-3xl font-medium max-w-sm">
+                A plataforma é 100% grátis, utilize sem nenhum custo
+              </h1>
               <img
                 src={bgBeautyBook}
                 alt="Beauty Book Background"
@@ -60,7 +64,7 @@ export function Home(){
               />
             </div>
             <div className="mt-1 flex flex-col gap-5">
-              <div className="hover:scale-105 duration-300 ease-in-out bg-black text-white max-w-lg border border-solid border-[#a199995e] p-6  rounded-lg">
+              <div className="mt-37 hover:scale-105 duration-300 ease-in-out bg-black text-white max-w-lg border border-solid border-[#a199995e] p-6 rounded-lg">
                 <div className="flex items-center gap-2 mb-2">
                   <MdCheckCircleOutline className="text-lg text-[#f0a] font-bold" />
                   <p className="text-[13px] text-[#f0a] font-bold">AGILIDADE</p>
@@ -99,6 +103,7 @@ export function Home(){
             </div>
           </div>
         </div>
+        <Footer/>
       </div>
     );
 }
