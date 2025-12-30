@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="bg-black min-h-80  max-w-screen relative flex items-center justify-center">
       <div className="flex flex-col text-center justify-center items-center">
-        <h2 className="text-[#ffffff] font-meidum text-3xl max-w-lg mt-35">
+        <h2 className="text-[#ffffff] font-medium text-3xl max-w-lg mt-20">
           Organize seus agendamentos em um só lugar!
         </h2>
         <p className="text-gray-400 mt-4">
