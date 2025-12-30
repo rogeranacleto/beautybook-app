@@ -16,7 +16,7 @@ export function Home(){
                 <div className="bg-[#000000] border border-solid border-[#f0a] w-10 h-10 flex items-center justify-center rounded-lg">
                   <MdCheckCircleOutline className="text-2xl text-[#f0a]" />
                 </div>
-                <p className="font-bold text-lg mt-5 text-white">Dashboard</p>
+                <p className="font-medium text-lg mt-5 text-white">Dashboard</p>
                 <p className="mt-5 text-gray-400 text-sm">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
                   architecto unde sed minima recusandae odit dicta quod sint,
@@ -28,7 +28,7 @@ export function Home(){
                 <div className="bg-[#000000] border border-solid border-[#f0a] w-10 h-10 flex items-center justify-center rounded-lg">
                   <MdCheckCircleOutline className="text-2xl text-[#f0a]" />
                 </div>
-                <p className="font-bold text-lg mt-5 text-white">Dashboard</p>
+                <p className="font-medium text-lg mt-5 text-white">Dashboard</p>
                 <p className="mt-5 text-gray-400 text-sm">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
                   architecto unde sed minima recusandae odit dicta quod sint,
@@ -40,7 +40,7 @@ export function Home(){
                 <div className="bg-[#000000] border border-solid border-[#f0a] w-10 h-10 flex items-center justify-center rounded-lg">
                   <MdCheckCircleOutline className="text-2xl text-[#f0a]" />
                 </div>
-                <p className="font-bold text-lg mt-5 text-white">Dashboard</p>
+                <p className="font-medium text-lg mt-5 text-white">Dashboard</p>
                 <p className="mt-5 text-gray-400 text-sm">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
                   architecto unde sed minima recusandae odit dicta quod sint,
