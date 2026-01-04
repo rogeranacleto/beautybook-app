@@ -6,6 +6,10 @@ import { FaArrowRight } from "react-icons/fa6";
 export function Footer() {
   return (
     <footer className="bg-black min-h-80  max-w-screen relative flex items-center justify-center">
+      <div className="absolute top-0 left-0 w-full flex justify-between items-start">
+        <div className="h-px w-1/2 bg-linear-to-r from-[#f0a] to-transparent rounded-full"></div>
+        <div className="h-px w-1/2 bg-linear-to-l from-[#f0a] to-transparent rounded-full"></div>
+      </div>
       <div className="flex flex-col text-center justify-center items-center">
         <h2 className="text-[#ffffff] font-medium text-3xl max-w-lg mt-20">
           Organize seus agendamentos em um só lugar!
@@ -20,9 +24,7 @@ export function Footer() {
           </button>
         </Link>
       </div>
-      <div
-        className="absolute bottom-1 flex items-center flex-col"
-      >
+      <div className="absolute bottom-1 flex items-center flex-col">
         <p className="text-white font-bold text-center">
           Desenvolvido por Roger Anacleto • © 2025 Todos os direitos reservados.
         </p>
