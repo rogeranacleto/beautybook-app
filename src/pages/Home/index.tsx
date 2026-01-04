@@ -4,9 +4,9 @@ import bgBeautyBook from "../../assets/bg-beautybook.png";
 import { Footer } from "../../components/Footer";
 export function Home(){
     return (
-      <div className="max-w-350">
+      <div className="max-w-screen w-full">
         <Hero />
-        <div className="min-h-screen bg-black w-full flex items-center justify-center flex-col p-5">
+        <div className="bg-black w-full flex items-center justify-center flex-col p-5 pl-30">
           <div className="flex flex-col">
             <h1 className="text-white mb-10 text-3xl font-medium max-w-sm">
               Pilares essenciais para um agendamento simples
@@ -52,7 +52,7 @@ export function Home(){
           </div>
         </div>
         <div className="min-h-screen bg-black flex items-center justify-center p-5">
-          <div className="flex gap-5 items-center flex-wrap">
+          <div className="flex gap-5 flex-wrap">
             <div>
               <h1 className="text-white mb-10 text-3xl font-medium max-w-sm">
                 A plataforma é 100% grátis, utilize sem nenhum custo
@@ -60,7 +60,7 @@ export function Home(){
               <img
                 src={bgBeautyBook}
                 alt="Beauty Book Background"
-                className="h-145 "
+                className="h-145 rounded-2xl"
               />
             </div>
             <div className="mt-1 flex flex-col gap-5">
