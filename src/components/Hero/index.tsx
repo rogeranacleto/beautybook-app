@@ -1,6 +1,7 @@
 import { Header } from "../Header";
 import bgHero from "../../assets/background-hero-1.png";
 import { FaArrowRight } from "react-icons/fa6";
+import { Link } from "react-router";
 
 export function Hero() {
   return (
@@ -10,13 +11,13 @@ export function Hero() {
         backgroundImage: `url(${bgHero})`,
         backgroundPosition: "center 5%",
         backgroundSize: "2000px",
-        backgroundRepeat: "no-repeat"
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="absolute inset-0 bg-black/70"></div>
       <div className="relative z-10 text-white">
         <header>
-          <Header />
+          <Header/>
         </header>
         <div className="flex flex-col items-center mt-50">
           <p className="text-xs bg-[#0A0A0A] px-4 py-1 rounded-3xl border border-solid border-[#646161] flex items-center gap-2">
@@ -28,11 +29,13 @@ export function Hero() {
           </p>
           <p className="text-center max-w-3xl">
             Lorem ipsum molestias illum eligendi cupiditate <br /> fuga sed
-            alias, possimus quasi nemo dicta fuga sed alias quas. Lorem ipsum tetur, aperiam accusamus deserunt, et laboriosam, in repellat eum culpa enim dolores ea vitae.
+            alias, possimus quasi nemo dicta fuga sed alias quas. Lorem ipsum
+            tetur, aperiam accusamus deserunt, et laboriosam, in repellat eum
+            culpa enim dolores ea vitae.
           </p>
-          <button className="text-xs bg-white text-black px-8 py-4 flex items-center gap-3 rounded-3xl hover:scale-110 duration-200 ease-in-out mt-8 cursor-pointer">
-            ACESSAR <FaArrowRight className="text-xs" />
-          </button>
+            <Link to={"/signup"} className="text-xs bg-white text-black px-8 py-4 flex items-center gap-3 rounded-3xl hover:scale-110 duration-200 ease-in-out mt-8 cursor-pointer">
+              <p className="flex items-center justify-center gap-3">ACESSAR <FaArrowRight className="text-xs" /></p>
+            </Link>
         </div>
       </div>
     </div>
