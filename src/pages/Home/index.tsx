@@ -2,11 +2,18 @@ import { Hero } from "../../components/Hero"
 import { MdCheckCircleOutline } from "react-icons/md";
 import bgBeautyBook from "../../assets/bg-beautybook.png";
 import { Footer } from "../../components/Footer";
+import { MdOutlinePerson } from "react-icons/md";
+import { LuLayoutDashboard } from "react-icons/lu";
+import { HiOutlineClipboardCheck } from "react-icons/hi";
+
 export function Home(){
     return (
       <div className="max-w-screen w-full">
         <Hero />
-        <div className="bg-black w-full flex items-center justify-center flex-col p-5 pl-30">
+        <div
+          className="bg-black w-full flex items-center justify-center flex-col p-5 pl-30"
+          id="mission"
+        >
           <div className="flex flex-col">
             <h1 className="text-white mb-10 text-3xl font-medium max-w-sm">
               Pilares essenciais para um agendamento simples
@@ -14,44 +21,49 @@ export function Home(){
             <div className="flex gap-5 flex-wrap">
               <div className="max-w-sm bg-black rounded-lg p-10 h-80 hover:scale-105 duration-300 ease-in-out border border-solid border-[#f0a]">
                 <div className="bg-[#000000] border border-solid border-[#f0a] w-10 h-10 flex items-center justify-center rounded-lg">
-                  <MdCheckCircleOutline className="text-2xl text-[#f0a]" />
+                  <LuLayoutDashboard className="text-2xl text-[#f0a]" />
                 </div>
                 <p className="font-medium text-lg mt-5 text-white">Dashboard</p>
                 <p className="mt-5 text-gray-400 text-sm">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
-                  architecto unde sed minima recusandae odit dicta quod sint,
-                  voluptate ex velit similique molestias saepe tenetur? Libero
-                  quod nihil quae soluta?
+                  Tenha uma visão geral do sistema, acompanhe clientes ativos e
+                  inativos, procedimentos em andamento ou finalizados, e
+                  visualize tudo rapidamente em cards informativos e tabelas
+                  para decisões mais rápidas.
                 </p>
               </div>
               <div className="max-w-sm bg-black rounded-lg p-10 h-80 hover:scale-105 duration-300 ease-in-out border border-solid border-[#f0a]">
                 <div className="bg-[#000000] border border-solid border-[#f0a] w-10 h-10 flex items-center justify-center rounded-lg">
-                  <MdCheckCircleOutline className="text-2xl text-[#f0a]" />
+                  <MdOutlinePerson className="text-2xl text-[#f0a]" />
                 </div>
-                <p className="font-medium text-lg mt-5 text-white">Dashboard</p>
+                <p className="font-medium text-lg mt-5 text-white">Clientes</p>
                 <p className="mt-5 text-gray-400 text-sm">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
-                  architecto unde sed minima recusandae odit dicta quod sint,
-                  voluptate ex velit similique molestias saepe tenetur? Libero
-                  quod nihil quae soluta?
+                  Cadastre todos os seus clientes em uma tabela organizada,
+                  armazene informações importantes, ative ou inative registros
+                  facilmente e acompanhe a quantidade de clientes ativos e
+                  inativos para ter mais controle do seu cadastro.
                 </p>
               </div>
               <div className="max-w-sm bg-black rounded-lg p-10 h-80 hover:scale-105 duration-300 ease-in-out border border-solid border-[#f0a]">
                 <div className="bg-[#000000] border border-solid border-[#f0a] w-10 h-10 flex items-center justify-center rounded-lg">
-                  <MdCheckCircleOutline className="text-2xl text-[#f0a]" />
+                  <HiOutlineClipboardCheck className="text-2xl text-[#f0a]" />
                 </div>
-                <p className="font-medium text-lg mt-5 text-white">Dashboard</p>
+                <p className="font-medium text-lg mt-5 text-white">
+                  Atendimentos
+                </p>
                 <p className="mt-5 text-gray-400 text-sm">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
-                  architecto unde sed minima recusandae odit dicta quod sint,
-                  voluptate ex velit similique molestias saepe tenetur? Libero
-                  quod nihil quae soluta?
+                  Registre novos atendimentos vinculando clientes cadastrados,
+                  defina valores e detalhes do atendimento, acompanhe status em
+                  andamento ou finalizado, e visualize o histórico completo de
+                  procedimentos concluídos com organização e clareza.
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div className="min-h-screen bg-black flex items-center justify-center p-5">
+        <div
+          className="min-h-screen bg-black flex items-center justify-center p-5 pb-15"
+          id="platform"
+        >
           <div className="flex gap-5 flex-wrap">
             <div>
               <h1 className="text-white mb-10 text-3xl font-medium max-w-sm">
@@ -60,50 +72,58 @@ export function Home(){
               <img
                 src={bgBeautyBook}
                 alt="Beauty Book Background"
-                className="h-145 rounded-2xl"
+                className="h-147 rounded-2xl"
               />
             </div>
             <div className="mt-1 flex flex-col gap-5">
               <div className="mt-37 hover:scale-105 duration-300 ease-in-out bg-black text-white max-w-lg border border-solid border-[#a199995e] p-6 rounded-lg">
                 <div className="flex items-center gap-2 mb-2">
                   <MdCheckCircleOutline className="text-lg text-[#f0a] font-bold" />
-                  <p className="text-[13px] text-[#f0a] font-bold">AGILIDADE</p>
+                  <p className="text-[13px] text-[#f0a] font-bold">
+                    VISÃO GERAL
+                  </p>
                 </div>
-                <p className="text-lg mb-2 font-medium">Agendamento ágil</p>
+                <p className="text-lg mb-2 font-medium">Controle completo</p>
                 <p className="text-sm text-[#a19999] mb-2">
-                  Lorem odit quasi, cumque consequuntur, sunt aspernatur
-                  doloribus, et iure laudantium!
+                  Visualize clientes, procedimentos em andamento e finalizados
+                  rapidamente em um só lugar.
                 </p>
                 <p className="text-[#a19999] text-sm">R$0,00</p>
               </div>
               <div className="hover:scale-105 duration-300 ease-in-out bg-black text-white max-w-lg border border-solid border-[#a199995e] p-6 rounded-lg">
                 <div className="flex items-center gap-2 mb-2">
                   <MdCheckCircleOutline className="text-lg text-[#f0a] font-bold" />
-                  <p className="text-[13px] text-[#f0a] font-bold">AGILIDADE</p>
+                  <p className="text-[13px] text-[#f0a] font-bold">CONTROLE</p>
                 </div>
-                <p className="text-lg mb-2 font-medium">Agendamento ágil</p>
+                <p className="text-lg mb-2 font-medium">
+                  Clientes centralizados
+                </p>
                 <p className="text-sm text-[#a19999] mb-2">
-                  Lorem odit quasi, cumque consequuntur, sunt aspernatur
-                  doloribus, et iure laudantium!
+                  Cadastre clientes rapidamente, organize informações pessoais,
+                  ative ou inative registros facilmente.
                 </p>
                 <p className="text-[#a19999] text-sm">R$0,00</p>
               </div>
               <div className="hover:scale-105 duration-300 ease-in-out bg-black text-white max-w-lg border border-solid border-[#a199995e] p-6 rounded-lg">
                 <div className="flex items-center gap-2 mb-2">
                   <MdCheckCircleOutline className="text-lg text-[#f0a] font-bold" />
-                  <p className="text-[13px] text-[#f0a] font-bold">AGILIDADE</p>
+                  <p className="text-[13px] text-[#f0a] font-bold">
+                    ATENDIMENTOS
+                  </p>
                 </div>
-                <p className="text-lg mb-2 font-medium">Agendamento ágil</p>
+                <p className="text-lg mb-2 font-medium">
+                  Controle de atendimentos
+                </p>
                 <p className="text-sm text-[#a19999] mb-2">
-                  Lorem odit quasi, cumque consequuntur, sunt aspernatur
-                  doloribus, et iure laudantium!
+                  Registre procedimentos, acompanhe atendimentos em andamento,
+                  finalize serviços e consulte históricos facilmente.
                 </p>
                 <p className="text-[#a19999] text-sm">R$0,00</p>
               </div>
             </div>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     );
 }
