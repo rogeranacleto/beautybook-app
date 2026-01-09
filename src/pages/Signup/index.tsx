@@ -3,11 +3,62 @@ import { MdOutlineEmail } from "react-icons/md";
 import { TbLockPassword } from "react-icons/tb";
 import { FaRegUser } from "react-icons/fa6";
 import { useState } from "react";
+import { useNavigate } from "react-router";
+import toast from "react-hot-toast";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { auth } from "../../services/FirebaseConnection";
 
 export function Signup() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [userName, setUserName] = useState("");
+const navigate = useNavigate();
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");
+const [userName, setUserName] = useState("");
+
+async function createAccount() {
+  try {
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    const user = userCredential.user;
+    await updateProfile(user, {
+      displayName: userName,
+    });
+    toast.success(
+      <div>
+        <h2 className="text-white font-bold text-sm">Conta Criada</h2>
+        <p className="text-gray-400 text-sm">A conta foi criada com sucesso.</p>
+      </div>
+    );
+    navigate("/login");
+  } catch (error: any) {
+    if (error.code === "auth/weak-password") {
+      toast.error(
+        <div>
+          <h2 className="text-white font-bold text-sm">Senha Fraca</h2>
+          <p className="text-gray-400 text-sm">
+            Precisa ter no mínimo 6 caracteres.
+          </p>
+        </div>
+      );
+    } else if (error.code === "auth/email-already-in-use") {
+      toast.error(
+        <div>
+          <h2 className="text-white font-bold text-sm">Email Existente</h2>
+          <p className="text-gray-400 text-sm">Esse email já está em uso.</p>
+        </div>
+      );
+    } else {
+      toast.error(
+        <div>
+          <h2 className="text-white font-bold text-sm">Erro</h2>
+          <p className="text-gray-400 text-sm">Ocorreu um erro inesperado</p>
+        </div>
+      );
+    }
+  }
+}
 
   return (
     <div>
@@ -24,48 +75,48 @@ export function Signup() {
             </div>
             <div className="w-full max-w-md overflow-hidden flex flex-col justify-center">
               <div className="flex flex-col mb-5.5 relative">
-                <label className="text-gray-400 font-bold mb-2.5">
+                <label className="text-gray-400 font-bold mb-2.5 text-sm">
                   Nome
                 </label>
-                <FaRegUser className="absolute text-lg text-gray-400 top-11.5 left-3" />
+                <FaRegUser className="absolute text-lg text-gray-400 top-9.5 left-3" />
                 <input
                   type="text"
                   placeholder="Digite seu nome"
-                  className="border border-solid border-gray-400/20 rounded-md pt-2 pb-2 pl-12 focus:border-gray-400/40 outline-none text-white"
+                  className="border border-solid border-gray-400/20 rounded-md pt-2 pb-2 pl-12 focus:border-gray-400/40 outline-none text-white text-sm"
                   required
                   value={userName}
                   onChange={(e) => setUserName(e.target.value)}
                 />
               </div>
               <div className="flex flex-col mb-5.5 relative">
-                <label className="text-gray-400 font-bold mb-2.5">Email</label>
-                <MdOutlineEmail className="absolute text-2xl text-gray-400 top-11 left-3" />
+                <label className="text-gray-400 font-bold mb-2.5 text-sm">Email</label>
+                <MdOutlineEmail className="absolute text-2xl text-gray-400 top-9.5 left-3" />
                 <input
                   type="text"
                   placeholder="nome@exemplo.com"
-                  className="border border-solid border-gray-400/20 rounded-md pt-2 pb-2 pl-12 focus:border-gray-400/40 outline-none text-white"
+                  className="border border-solid border-gray-400/20 rounded-md pt-2 pb-2 pl-12 focus:border-gray-400/40 outline-none text-white text-sm"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="flex flex-col relative">
-                <label className="text-gray-400 font-bold mb-2.5">Senha</label>
-                <TbLockPassword className="absolute text-2xl text-gray-400 top-10.5 left-3" />
+                <label className="text-gray-400 font-bold mb-2.5 text-sm">Senha</label>
+                <TbLockPassword className="absolute text-2xl text-gray-400 top-9 left-3" />
                 <input
                   type="password"
                   placeholder="Digite sua senha"
-                  className="border border-solid border-gray-400/20 rounded-md pt-2 pb-2 pl-12 focus:border-gray-400/40 outline-none text-white"
+                  className="border border-solid border-gray-400/20 rounded-md pt-2 pb-2 pl-12 focus:border-gray-400/40 outline-none text-white text-sm"
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               <div className="flex flex-col items-center">
-                <button className="w-full bg-[#f0a] rounded-lg p-2 mt-4.5 cursor-pointer text-white hover:bg-[#ff00aaf3] duration-700 ease-in-out">
+                <button className="w-full bg-[#f0a] rounded-lg p-2 mt-4.5 cursor-pointer text-white hover:bg-[#ff00aaf3] duration-700 ease-in-out text-sm" onClick={createAccount}>
                   Criar Conta
                 </button>
-                <Link to={"/login"} className="text-gray-400 mt-15">
+                <Link to={"/login"} className="text-gray-400 mt-15 text-sm">
                   Já possuí uma conta?
                   <span className="text-[#f0a]"> Faça login</span>
                 </Link>
