@@ -161,7 +161,7 @@ export function Sidebar({ isCollapsed, setIsCollapsed }: SidebarProps) {
                       isCollapsed ? "hidden" : "block"
                     }`}
                   >
-                    Agendamentos
+                    Atendimentos
                   </p>
                 </div>
               )}
