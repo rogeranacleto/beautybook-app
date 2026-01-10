@@ -11,20 +11,22 @@ export function Footer() {
         <div className="h-px w-1/2 bg-linear-to-l from-[#f0a] to-transparent rounded-full"></div>
       </div>
       <div className="flex flex-col text-center justify-center items-center">
-        <h2 className="text-[#ffffff] font-medium text-3xl max-w-lg mt-20">
+        <h2 className="text-[#ffffff] font-medium text-3xl max-w-lg mt-20" data-aos="fade-right" data-aos-duration="2700">
           Organize seus agendamentos em um só lugar!
         </h2>
-        <p className="text-gray-400 mt-4">
+        <p className="text-gray-400 mt-4" data-aos="fade-right" data-aos-duration="2800">
           A plataforma é totalmente gratuíta, crie sua conta e comece a utilizar
           os recursos.
         </p>
-        <Link to={"/signup"}>
-          <button className=" mb-30 text-xs bg-[#f0a] text-white px-8 py-4 flex items-center gap-3 rounded-3xl hover:scale-110 duration-200 ease-in-out mt-8 cursor-pointer">
-            ACESSAR <FaArrowRight className="text-xs text-white" />
-          </button>
-        </Link>
+        <div data-aos="fade-right" data-aos-duration="2900">
+          <Link to={"/signup"}>
+            <button className=" mb-30 text-xs bg-[#f0a] text-white px-8 py-4 flex items-center gap-3 rounded-3xl hover:scale-110 duration-200 ease-in-out mt-8 cursor-pointer">
+              ACESSAR <FaArrowRight className="text-xs text-white" />
+            </button>
+          </Link>
+        </div>
       </div>
-      <div className="absolute bottom-1 flex items-center flex-col">
+      <div className="absolute bottom-1 flex items-center flex-col" data-aos="fade-left" data-aos-duration="2900">
         <p className="text-white font-bold text-center text-sm">
           Desenvolvido por Roger Anacleto • © 2025 Todos os direitos reservados.
         </p>
