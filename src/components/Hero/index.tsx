@@ -21,12 +21,13 @@ export function Hero() {
         </header>
         <div className="flex flex-col items-center mt-50">
           <p className="text-xs bg-[#0A0A0A] px-4 py-1 rounded-3xl border border-solid border-[#646161] flex items-center gap-2">
-            <div className="h-2 w-2 bg-white rounded-full"></div>SUA AGENDA, DO SEU JEITO
+            <div className="h-2 w-2 bg-white rounded-full"></div>SUA AGENDA, DO
+            SEU JEITO
           </p>
           <p className="text-6xl max-w-3xl text-center font-medium mt-3 bg-linear-to-r from-white to-pink-800 bg-clip-text text-transparent pb-6">
             Beautybook agendamentos simples
           </p>
-          <p className="text-center max-w-3xl">
+          <p className="text-center max-w-3xl text-[#a19e9e]">
             Organize seus clientes, gerencie agendas e registre <br />
             procedimentos em um só lugar, com praticidade e controle total
             <br /> da sua empresa de estética, economizando tempo, evitando
