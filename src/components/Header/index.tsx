@@ -14,8 +14,6 @@ export function Header() {
             <button
               className="text-sm hover:text-[#f0a] duration-300 ease-in-out cursor-pointer"
               onClick={() => scrollToSection("platform")}
-              data-aos="fade-right"
-              data-aos-duration="3000"
             >
               Plataforma
             </button>
