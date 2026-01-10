@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 export function Footer() {
   return (
-    <footer className="bg-black min-h-80  max-w-screen relative flex items-center justify-center">
+    <footer className="bg-black min-h-80  max-w-screen relative flex items-center justify-center p-5">
       <div className="absolute top-0 left-0 w-full flex justify-between items-start">
         <div className="h-px w-1/2 bg-linear-to-r from-[#f0a] to-transparent rounded-full"></div>
         <div className="h-px w-1/2 bg-linear-to-l from-[#f0a] to-transparent rounded-full"></div>
