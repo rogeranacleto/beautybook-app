@@ -52,7 +52,7 @@ return (
           <div className="flex flex-col items-center mb-5">
             <div className="flex items-center gap-3 mb-3 justify-center">
               <h2 className="font-bold text-white text-2xl flex gap-4">
-                Bem-vindo!
+                Bem-Vinda!
               </h2>
             </div>
             <p className="text-gray-400 tracking-wide font-medium">
